@@ -1040,7 +1040,7 @@ fill_resources(struct pci_dev *d, DEVINST devinst, DEVINSTID_A devinst_id)
 
       if (!res_des_data_size)
         {
-          a->warning("Cannot retrieve resource data of PCI device %s: %s.", devinst_id, "Empty data");
+          a->debug("Cannot retrieve resource data of PCI device %s: %s.", devinst_id, "Empty data");
           continue;
         }
 
