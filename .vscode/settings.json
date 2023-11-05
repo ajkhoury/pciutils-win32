@@ -1,0 +1,39 @@
+{
+    "files.associations": {
+        "*.acf": "vdf",
+        "*.idc": "c",
+        "*.w": "cpp",
+        "*.tpl": "cpp",
+        "*.inf": "inf",
+        "*.c": "c",
+        "*.h": "c",
+    },
+    "makefile.makePath": "D:/Tools/msys64/mingw64/bin/mingw32-make.exe",
+    "makefile.configurations": [
+        {
+            "name": "MinGW Windows",
+            "makePath": "D:/Tools/msys64/mingw64/bin/mingw32-make.exe",
+            "makefilePath": "${workspaceFolder}/Makefile",
+            "preConfigureArgs": [],
+            "makeArgs": [
+                "CC=x86_64-w64-mingw32-gcc",
+                "HOST=x86_64-windows",
+                "CFLAGS=\"-Og -g -Wall -W -Wno-format -Wno-cast-function-type -Wno-unused-function -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes\"",
+                "LDFLAGS=\"-static\"",
+                "ZLIB=yes",
+                "IDSDIR=\"\"",
+                "COMPAT_GETOPT=yes"
+            ],
+            "problemMatchers": [
+                "$gcc"
+            ]
+        }
+    ],
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "${workspaceFolder}",
+            "binaryPath": "${workspaceFolder}/lspci.exe",
+            "binaryArgs": []
+        }
+    ]
+}
