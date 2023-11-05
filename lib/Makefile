@@ -75,6 +75,10 @@ ifdef PCI_HAVE_PM_WIN32_SYSDBG
 OBJS += win32-sysdbg
 endif
 
+ifdef PCI_HAVE_PM_WIN32_DIRECTIO
+OBJS += win32-directio
+endif
+
 all: $(PCILIB) $(PCILIBPC)
 
 ifeq ($(SHARED),no)
@@ -146,6 +150,7 @@ hurd.o: hurd.c $(INCL)
 win32-cfgmgr32.o: win32-cfgmgr32.c $(INCL)
 win32-kldbg.o: win32-kldbg.c $(INCL)
 win32-sysdbg.o: win32-sysdbg.c $(INCL)
+win32-directio.o: win32-directio.c $(INCL)
 
 # MinGW32 toolchain has some required Win32 header files in /ddk subdirectory.
 # But these header files include another header files from /ddk subdirectory

@@ -170,6 +170,7 @@ case $sys in
 		echo >>$c '#define PCI_HAVE_PM_WIN32_CFGMGR32'
 		echo >>$c '#define PCI_HAVE_PM_WIN32_KLDBG'
 		echo >>$c '#define PCI_HAVE_PM_WIN32_SYSDBG'
+		echo >>$c '#define PCI_HAVE_PM_WIN32_DIRECTIO'
 		# Warning: MinGW-w64 (incorrectly) provides cfgmgr32 functions
 		# also in other import libraries, not only in libcfgmgr32.a.
 		# So always set -lcfgmgr32 as a first library parameter which

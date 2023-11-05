@@ -146,6 +146,11 @@ static struct pci_methods *pci_methods[PCI_ACCESS_MAX] = {
 #else
   NULL,
 #endif
+#ifdef PCI_HAVE_PM_WIN32_DIRECTIO
+  &pm_win32_directio,
+#else
+  NULL,
+#endif
 #ifdef PCI_HAVE_PM_MMIO_CONF
   &pm_mmio_conf1,
   &pm_mmio_conf1_ext,
@@ -175,6 +180,7 @@ static int probe_sequence[] = {
   PCI_ACCESS_WIN32_CFGMGR32,
   PCI_ACCESS_WIN32_KLDBG,
   PCI_ACCESS_WIN32_SYSDBG,
+  PCI_ACCESS_WIN32_DIRECTIO,
   // Low-level methods poking the hardware directly
   PCI_ACCESS_ECAM,
   PCI_ACCESS_I386_TYPE1,
